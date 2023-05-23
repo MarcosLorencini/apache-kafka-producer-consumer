@@ -1,0 +1,7 @@
+server:
+  port: 8000
+#porta que o kafka vai se acessado
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:29092
