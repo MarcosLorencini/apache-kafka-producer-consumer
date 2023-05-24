@@ -1,6 +1,7 @@
+#porta do deste serviço
 server:
   port: 8000
-#porta que o kafka vai se acessado
+#porta que o kafka vai se acessado, a porta que o kafka vai rodar
 spring:
   kafka:
     producer:
