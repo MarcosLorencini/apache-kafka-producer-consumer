@@ -21,6 +21,7 @@ public class KafkaAdminConfig {
     @Bean
     public KafkaAdmin kafkaAdmin() {
         var configs = new HashMap<String, Object>();
+        //pega localhost:29092 do application.yml
         configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, properties.getBootstrapServers());
         return new KafkaAdmin(configs);
     }
