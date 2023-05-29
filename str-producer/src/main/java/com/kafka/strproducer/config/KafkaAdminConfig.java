@@ -27,6 +27,7 @@ public class KafkaAdminConfig {
     }
 
     //toda a vez que iniciar o projeto criar o topico
+    //por padão o kafka tem que ter uma partição, se não definir ele criar uma partição
     @Bean
     public KafkaAdmin.NewTopics topics() {
         return new KafkaAdmin.NewTopics(
