@@ -31,4 +31,10 @@ public @interface StrConsumerCustomListener {
     // temos que definir na clase StrConsumerListener
     @AliasFor(annotation = KafkaListener.class, attribute = "groupId")
     String groupId() default "";
+
+    //dentro de @KafkaLister existe um metodo errorHandler() que podemos customizar
+    //errorCustomrHandler é bean que o spring vai disponibilizar que é o nome da classe
+    //captura exception
+    @AliasFor(annotation = KafkaListener.class, attribute = "errorHandler")
+    String errorHandler() default "errorCustomrHandler";
 }
