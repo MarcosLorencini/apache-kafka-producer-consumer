@@ -29,7 +29,9 @@ public class StrConsumerListener {
         log.info("LOG ::: Receive message {}", message);
     }
 
-    @StrConsumerCustomListener(groupId = "group-2")
+    //vai usar outro containerFactory relacionado ao interceptor
+    //como não usando mais o listener customizado deve definir o topico
+    @KafkaListener(groupId = "group-2", topics = "str-topic", containerFactory = "validMessageContainerFactory")
     public void history(String message) {
         log.info("HISTORY ::: Receive message {}", message);
     }
