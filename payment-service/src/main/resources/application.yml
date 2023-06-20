@@ -1,8 +1,7 @@
 #vai rodar nesta porta
 server:
-  port: 8000
-#porta do kafka
+  port: ${PORT:8000}
+
 spring:
   kafka:
-    consumer:
-      bootstrap-servers: localhost:29092
+    bootstrap-servers: ${KAFKA_HOST:localhost:29092}
